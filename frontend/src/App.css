@@ -1,0 +1,296 @@
+/* Base styles */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --hover-color: #2980b9;
+  --background-color: #f4f4f4;
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --border-color: #ddd;
+  --text-color: #333;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('/bg1.jpg') no-repeat center center fixed;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Container styles */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.189);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Header styles */
+.app-header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid var(--secondary-color);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Main content area */
+.app-main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Form styling */
+.prediction-form {
+  background-color: rgba(255, 255, 255, 0.386);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group input {
+ width: auto;
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: var(--white);
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+button {
+  grid-column: 1 / -1;
+  padding: 1rem 1.5rem; /* Adjusted padding for a balanced look */
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 700; /* Slightly bolder font for emphasis */
+  text-transform: uppercase;
+  letter-spacing: 0.8px; /* Increased spacing for a modern feel */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px); /* Slightly more pronounced hover effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Gentle press-down effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow when active */
+}
+
+button:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.5); /* Add custom focus ring */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Light gray for disabled state */
+  color: #666666; /* Dark gray text for readability */
+  cursor: not-allowed; /* Change cursor to indicate non-clickable */
+  box-shadow: none;
+  transform: none;
+}
+
+
+/* Prediction result styles */
+.prediction-result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.prediction-result h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.prediction-result pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: var(--white);
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Chat container styles */
+.chat-container {
+  margin-top: 2rem;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.chat-messages {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background-color: var(--light-gray);
+  border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  max-width: 80%;
+}
+
+.user-message {
+  margin-left: auto;
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.assistant-message {
+  margin-right: auto;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+}
+
+.chat-input {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.chat-input input {
+  flex-grow: 1;
+  width: auto;
+}
+
+.chat-input button {
+  flex-shrink: 0;
+  width: auto;
+  padding: 0.8rem 1.5rem;
+}
+
+/* Footer styles */
+.app-footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .app-main {
+    padding: 1rem;
+  }
+
+  .prediction-form {
+    padding: 1rem;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+
+  .chat-input {
+    flex-direction: column;
+  }
+
+  .chat-input button {
+    width: 100%;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prediction-result,
+  .chat-container {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .chat-messages {
+    max-height: 300px;
+  }
+}

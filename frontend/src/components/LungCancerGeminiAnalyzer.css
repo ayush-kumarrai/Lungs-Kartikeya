@@ -1,0 +1,83 @@
+.lung-cancer-analyzer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .lung-cancer-analyzer h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .lung-cancer-analyzer input[type="file"] {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 5px;
+  }
+  
+  .image-preview {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .image-preview img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .lung-cancer-analyzer button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lung-cancer-analyzer button:hover:not([disabled]) {
+    background-color: #0056b3;
+  }
+  
+  .lung-cancer-analyzer button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .analysis-result {
+    margin-top: 20px;
+  }
+  
+  .analysis-result h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .analysis-result p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .analysis-result p span {
+    font-weight: bold;
+    color: #ff4500; /* Highlighted text in analysis */
+  }
+  
